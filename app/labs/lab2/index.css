@@ -1,0 +1,401 @@
+/* p {
+  background-color: green;
+  color: white;
+} */
+
+#wd-lab2 h3 {
+  background-color: lightblue;
+  color: darkblue;
+}
+
+#wd-lab2 h2 {
+  background-color: navy;
+  color: white;
+}
+
+p#wd-id-selector-1 {
+  background-color: red;
+  color: white;
+}
+p#wd-id-selector-2 {
+  background-color: yellow;
+  color: black;
+}
+p#wd-id-selector-3 {
+  background-color: orange;
+  color: black;
+}
+p#wd-ai-id-selector {
+  background-color: teal;
+  color: white;
+}
+
+.wd-class-selector {
+  background-color: yellow;
+  color: blue;
+}
+.wd-your-class {
+  background-color: pink;
+  color: darkred;
+}
+.wd-ai-class-selector {
+  background-color: lightgreen;
+  color: darkgreen;
+}
+
+.wd-selector-1 .wd-selector-3 {
+  background-color: red;
+  color: white;
+}
+.wd-selector-2 > .wd-selector-3 > .wd-selector-4 {
+  background-color: yellow;
+  color: blue;
+}
+.wd-selector-3 > .wd-selector-6 {
+  background-color: black;
+  color: orange;
+}
+.wd-selector-1 .wd-ai-selector-5 {
+  background-color: purple;
+  color: white;
+}
+
+#wd-cascade-mine {
+  color: red;
+}
+.wd-cascade-mine {
+  color: green;
+}
+:where(#wd-css-cascade-mine) p {
+  color: blue;
+}
+
+/* The id selector should win: tag (green) < class (yellow) < id (red) */
+:where(#wd-css-cascade-ai) p {
+  background-color: green;
+}
+.wd-ai-cascade {
+  background-color: yellow;
+}
+#wd-ai-cascade {
+  background-color: red;
+}
+
+.wd-fg-color-black { color: black; }
+.wd-fg-color-white { color: white; }
+.wd-fg-color-blue { color: #7070ff; }
+.wd-fg-color-red { color: #ff7070; }
+.wd-fg-color-green { color: green; }
+
+.wd-bg-color-yellow { background-color: #ffff07; }
+.wd-bg-color-blue { background-color: #7070ff; }
+.wd-bg-color-red { background-color: #ff7070; }
+.wd-bg-color-green { background-color: green; }
+.wd-bg-color-gray { background-color: lightgray; }
+
+.wd-border-fat { border-width: 20px 30px 20px 30px; }
+.wd-border-thin { border-width: 4px; }
+.wd-border-solid { border-style: solid; }
+.wd-border-dashed { border-style: dashed; }
+.wd-border-yellow { border-color: #ffff07; }
+.wd-border-red { border-color: #ff7070; }
+.wd-border-blue { border-color: #7070ff; }
+
+.wd-padded-top-left {
+  padding-top: 50px;
+  padding-left: 50px;
+}
+.wd-padded-bottom-right {
+  padding-bottom: 50px;
+  padding-right: 50px;
+}
+.wd-padding-fat {
+  padding: 50px;
+}
+.wd-ai-padded-top {
+  padding-top: 50px;
+}
+
+.wd-margin-bottom {
+  margin-bottom: 50px;
+}
+.wd-margin-right-left {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.wd-margin-all-around {
+  margin: 30px;
+}
+.wd-margin-top-left {
+  margin-top: 30px;
+  margin-left: 80px;
+}
+
+.wd-box-model-parent {
+  display: flow-root;
+  background-color: lightgray;
+  padding-top: 8px;
+}
+.wd-box-model-margin-label,
+.wd-box-model-border-label,
+.wd-box-model-padding-label {
+  font-size: 12px;
+  line-height: 12px;
+}
+.wd-box-model-box {
+  position: relative;
+  margin: 20px;
+  padding: 20px;
+  border: 10px solid #c41e3a;
+  background-color: #cfe2ff;
+}
+.wd-box-model-border-label {
+  position: absolute;
+  top: -24px;
+  left: 0;
+  color: #c41e3a;
+}
+.wd-box-model-margin-label {
+  position: absolute;
+  bottom: -26px;
+  left: -20px;
+}
+.wd-box-model-padding-label {
+  position: absolute;
+  top: 2px;
+  left: 6px;
+}
+.wd-box-model-content {
+  background-color: #d1e7dd;
+  padding: 8px;
+}
+.wd-box-sizing-demo {
+  background-color: lightgray;
+  padding: 10px;
+}
+.wd-box-sizing-content,
+.wd-box-sizing-border,
+.wd-box-sizing-mine {
+  width: 200px;
+  height: 180px;
+  padding: 20px;
+  border: 10px solid #c41e3a;
+  background-color: #ffff07;
+  margin-bottom: 10px;
+}
+.wd-box-sizing-content {
+  box-sizing: content-box;
+}
+.wd-box-sizing-border {
+  box-sizing: border-box;
+}
+.wd-box-sizing-mine {
+  width: 300px;
+  box-sizing: border-box;
+}
+
+.wd-rounded-corners-top {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+.wd-rounded-corners-bottom {
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+.wd-rounded-corners-all-around {
+  border-radius: 50px;
+}
+.wd-rounded-corners-inline {
+  border-radius: 30px 0px 20px 50px;
+}
+.wd-rounded-corners-diagonal {
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+.wd-ai-rounded-left {
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+
+.wd-dimension-portrait {
+  width: 75px;
+  height: 100px;
+}
+.wd-dimension-landscape {
+  width: 100px;
+  height: 75px;
+}
+.wd-dimension-square {
+  width: 75px;
+  height: 75px;
+}
+.wd-dimension-banner {
+  width: 250px;
+  height: 40px;
+}
+.wd-ai-dimension {
+  width: 120px;
+  height: 60px;
+  background-color: #ffff07;
+}
+
+.wd-display-inline {
+  display: inline;
+  width: 150px;
+  height: 50px;
+  padding: 5px;
+}
+.wd-display-inline-block {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  padding: 5px;
+}
+.wd-display-block {
+  display: block;
+  width: 150px;
+  height: 50px;
+  padding: 5px;
+}
+
+.wd-pos-relative-nudge-up-right {
+  position: relative;
+  bottom: 30px;
+  left: 30px;
+}
+.wd-pos-relative-nudge-down-right {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+.wd-pos-relative {
+  position: relative;
+}
+.wd-pos-relative-nudge-mine {
+  position: relative;
+  top: 10px;
+  left: 120px;
+}
+.wd-ai-pos-relative-nudge {
+  position: relative;
+  top: 15px;
+  right: 25px;
+}
+
+.wd-pos-absolute-10-10 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.wd-pos-absolute-50-50 {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.wd-pos-absolute-120-20 {
+  position: absolute;
+  top: 20px;
+  left: 120px;
+}
+.wd-pos-absolute-top-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.wd-ai-pos-absolute-br {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.wd-pos-fixed {
+  position: fixed;
+  right: 0px;
+  bottom: 50%;
+}
+.wd-pos-fixed-mine {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  padding: 5px 10px;
+  background-color: darkorange;
+  color: white;
+}
+.wd-ai-pos-fixed {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 5px 10px;
+  background-color: purple;
+  color: white;
+}
+
+.wd-zindex-bring-to-front {
+  z-index: 10;
+}
+.wd-pos-absolute-30-150 {
+  position: absolute;
+  top: 30px;
+  left: 150px;
+}
+.wd-zindex-mine {
+  z-index: 15;
+}
+.wd-ai-zindex-top {
+  z-index: 20;
+  position: absolute;
+  top: 80px;
+  left: 80px;
+}
+
+.wd-float-left {
+  float: left;
+  height: 100px;
+}
+.wd-float-right {
+  float: right;
+  height: 100px;
+}
+img.wd-float-left,
+img.wd-float-right {
+  width: auto;
+  max-width: 35%;
+}
+img.wd-float-left {
+  margin: 0 1rem 0.5rem 0;
+}
+img.wd-float-right {
+  margin: 0 0 0.5rem 1rem;
+}
+.wd-float-done {
+  clear: both;
+}
+
+.wd-grid-row {
+  clear: both;
+}
+.wd-grid-col-half-page { width: 50%; float: left; }
+.wd-grid-col-third-page { width: 33%; float: left; }
+.wd-grid-col-two-thirds-page { width: 67%; float: left; }
+.wd-grid-col-left-sidebar { width: 20%; float: left; }
+.wd-grid-col-main-content { width: 60%; float: left; }
+.wd-grid-col-right-sidebar { width: 20%; float: left; }
+.wd-grid-col-quarter-page { width: 25%; float: left; }
+
+.wd-flex-row-container {
+  display: flex;
+  flex-direction: row;
+}
+.wd-flex-row-container > div {
+  height: 100px;
+  padding: 10px;
+  white-space: nowrap;
+}
+.wd-flex-grow-1 {
+  flex-grow: 1;
+}
+.wd-width-110px {
+  /* Room for "Column 1" + 10px padding under border-box */
+  width: 110px;
+  flex-shrink: 0;
+}
