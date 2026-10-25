@@ -33,7 +33,7 @@ export default function Display() {
       <h3>Inline div</h3>
       <div>
         <div className="wd-display-inline wd-bg-color-green wd-fg-color-white">
-          This div is inline, so its 150px width is ignored
+          This div is inline so its width is ignored
         </div>
       </div>
       <div id="wd-ai-display" className="wd-display-inline wd-bg-color-gray">

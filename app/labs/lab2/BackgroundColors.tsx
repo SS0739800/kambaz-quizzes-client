@@ -9,7 +9,7 @@ export default function BackgroundColors() {
         </span>
       </p>
       <p className="wd-bg-color-gray wd-fg-color-black">
-        My block has a gray background with black text so it is easy to read.
+        My block has a gray background with black text to make it easy to read.
       </p>
       <div id="wd-ai-bg" className="wd-bg-color-yellow wd-fg-color-black">
         Sample block with a yellow background and black text.
