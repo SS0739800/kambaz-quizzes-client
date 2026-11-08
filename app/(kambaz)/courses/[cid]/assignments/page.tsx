@@ -1,15 +1,15 @@
+"use client";
+import { useParams, useRouter } from "next/navigation";
 import { FaPlus, FaSearch } from "react-icons/fa";
 import AssignmentItem from "./AssignmentItem";
-import * as db from "../../../database";
+import { useAssignmentsStore } from "../../../store/assignmentsStore";
 
-export default async function Assignments({
-  params,
-}: {
-  params: Promise<{ cid: string }>;
-}) {
-  const { cid } = await params;
-  const assignments = db.assignments.filter(
-    (assignment) => assignment.course === cid,
+export default function Assignments() {
+  const { cid } = useParams();
+  const courseId = String(cid);
+  const router = useRouter();
+  const assignments = useAssignmentsStore((state) => state.assignments).filter(
+    (assignment) => assignment.course === courseId,
   );
   return (
     <div id="wd-assignments">
@@ -34,6 +34,7 @@ export default async function Assignments({
             id="wd-add-assignment"
             type="button"
             className="inline-flex items-center gap-1 rounded bg-red-600 px-3 py-1.5 text-sm font-medium text-white"
+            onClick={() => router.push(`/courses/${courseId}/assignments/new`)}
           >
             <FaPlus /> Assignment
           </button>
@@ -55,7 +56,7 @@ export default async function Assignments({
         {assignments.map((assignment) => (
           <AssignmentItem
             key={assignment._id}
-            cid={cid}
+            cid={courseId}
             aid={assignment._id}
             title={assignment.title}
             details={`Multiple Modules | Not available until ${assignment.available} | Due ${assignment.due} | ${assignment.points} pts`}
